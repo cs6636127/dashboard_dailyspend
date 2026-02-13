@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard รายจ่าย</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <div class="container">
+
+        <div class="dashboard-header">
+            <h1>Dashboard สรุปรายจ่าย</h1>
+            <a href="index.html" class="btn-back top-right">ย้อนกลับ</a>
+        </div>
+
+        <div class="filter-section">
+
+            <div class="filter-left">
+                <label>เลือกเดือน</label>
+                <input type="month" id="monthPicker">
+            </div>
+
+            <div class="filter-right">
+                <label>หมวดหมู่</label>
+                <select id="categoryFilter">
+                    <option value="all">ทั้งหมด</option>
+                    <option value="food">อาหาร</option>
+                    <option value="transportation">การเดินทาง</option>
+                    <option value="education">การศึกษา</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button class="btn-view" onclick="loadData()">แสดงข้อมูล</button>
+
+        <h2 id="total">ยอดรวม: 0 บาท</h2>
+
+        <h3>สรุปตามหมวดหมู่</h3>
+        <ul id="categorySummary"></ul>
+
+        <h3>รายการรายจ่าย</h3>
+        <div class="table-wrapper">
+            <table>
+                <tbody id="expenseTable"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

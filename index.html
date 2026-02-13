@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ระบบบันทึกรายจ่าย</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>ระบบบันทึกรายจ่ายประจำวัน</h1>
+        <h2 class="subtitle">เพิ่มรายการรายจ่าย</h2>
+
+        <form id="expenseForm">
+
+            <div class="form-group">
+                <label>จำนวนเงิน (บาท)</label>
+                <input type="number" id="amount" required>
+            </div>
+
+            <div class="form-group">
+                <label>หมวดหมู่</label>
+                <select id="category">
+                    <option value="1">อาหาร</option>
+                    <option value="2">การเดินทาง</option>
+                    <option value="3">การศึกษา</option>
+                    <option value="4">อื่น ๆ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>วันที่</label>
+                <input type="date" id="expense_date" required>
+            </div>
+
+            <button type="submit">บันทึกรายจ่าย</button>
+        </form>
+
+        <a href="dashboard.html" class="dashboard-link btn-back">
+            ไปยังแดชบอร์ด
+        </a>
+
+        <div id="result"></div>
+        <div id="result"></div>
+
+    </div>
+
+    <script src="js/addExpense.js"></script>
+</body>
+
+</html>
