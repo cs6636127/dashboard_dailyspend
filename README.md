@@ -15,6 +15,7 @@ http://expenseapp2026.ct.ws
 - HTML
 - CSS
 - JavaScript
+- PHP
 
 ## 📂 Project Structure
 - index.html
